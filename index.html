@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Zainah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffcccb;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #b30000;
+        }
+
+        .message {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Sad emojis in the background */
+        .message.sad-background {
+            background-image: url('https://emojiapedia.com/static/images/emojis/sad-emoji.png');
+            background-repeat: no-repeat;
+            background-size: 50px 50px;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: #fff;
+        }
+
+        /* Happy emojis in the background after click */
+        .message.happy-background {
+            background-image: url('https://emojiapedia.com/static/images/emojis/happy-emoji.png');
+            background-repeat: no-repeat;
+            background-size: 50px 50px;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: #fff;
+        }
+
+        .message p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffcccb;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            margin: 20px auto;
+            background-color: #b30000;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #990000;
+        }
+
+        .thank-you {
+            display: none;
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 50px;
+            color: #b30000;
+        }
+
+        /* Emojis for sadness */
+        .sad-emojis {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        /* Emojis for happiness */
+        .happy-emojis {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="https://drive.google.com/uc?export=download&id=1pz7utso6ZFc_PC1pF-oatFGpU3AYanRp" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<header>
+    <h1>I'm Really Sorry, Azhagy</h1>
+</header>
+
+<div class="message sad-background" id="apologyMessage">
+    <p>Dear Zainah,</p>
+    <p>I know things got heated last night, and I deeply regret the way things turned out. I never meant to hurt you, and I’m truly sorry for the way I acted. You mean so much to me, and it breaks my heart 💔 knowing that I upset you. 😢</p>
+    <p>In the heat of the moment, I said things I didn’t mean. 😔 But please know that I care about you more than anything, and I never want to make you feel like you’re less important to me. You’re my best friend, and I want us to be able to talk things through, no matter what. 💔</p>
+    <p>I miss the good times we shared, and I hope we can work through this together. I’m really sorry, Zainah, and I hope you can find it in your heart to forgive me. 😢</p>
+    <p>Love, <strong>Asleem</strong></p>
+
+    <!-- Sad Emojis for More Emotional Impact -->
+    <div class="sad-emojis">
+        😔💔😢
+    </div>
+</div>
+
+<a href="#" class="button" onclick="showThankYou()">I Forgive You!</a>
+
+<!-- Thank You Message -->
+<div class="thank-you" id="thankYouMessage">
+    <p>Thank you so much, Zainah. ❤️</p>
+    <p>Don't let me go...</p>
+
+    <!-- Happy Emojis after forgiveness -->
+    <div class="happy-emojis">
+        😊💖🌟
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 Asleem. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    function showThankYou() {
+        // Hide the apology message
+        document.getElementById("apologyMessage").style.display = "none";
+        
+        // Show the thank you message
+        document.getElementById("thankYouMessage").style.display = "block";
+        
+        // Change background to happy after click
+        document.getElementById("apologyMessage").classList.remove('sad-background');
+        document.getElementById("apologyMessage").classList.add('happy-background');
+    }
+</script>
+
+</body>
+</html>
